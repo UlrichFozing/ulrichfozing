@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon E-Portfolio - [Votre Nom]</title>
+    <link rel="stylesheet" href="CSS/EportFolio.css">
+    
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <header>
+    	<div id="top-bar">
+	        
+	        <a href="EportFolio.html" id="logo-link">
+	        	<img src="images/ENSEEIHT.png" alt="Logo de mon école" id="school-logo">
+	        </a>
+	        <nav id="main-nav">
+	            <ul>
+	                <li><a href="EportFolio.html">Accueil</a></li>
+	                <li><a href="about.html">About</a></li>
+	                <li class="dropdown">
+			            <a href="education.html">Education</a>
+			            <ul class="dropdown-menu">
+			                <li><a href="education.html#academic-background">Academic Background</a></li>
+			                <li><a href="education.html#certifications">Certifications</a></li>
+			                <li><a href="education.html#academic-projects">Academic Projects</a></li>
+			            </ul>
+			        </li>
+			
+			        <li class="dropdown">
+			            <a href="career.html">Career</a>
+			            <ul class="dropdown-menu">
+			                <li><a href="career.html#internships">Internships</a></li>
+			                <li><a href="career.html#professional-projects">Professional Projects</a></li>
+			                <li><a href="career.html#work-Experience">Work Experience</a></li>
+			                
+			            </ul>
+			        </li>
+			
+			        <li><a href="skills.html">Skills & Technologies</a></li>
+			        
+			        <li class="dropdown">
+			            <a href="mobility.html">Mobility and Engagement</a>
+			            <ul class="dropdown-menu">
+			                <li><a href="mobility.html#international-mobility">International Mobility</a></li>
+			                <li><a href="mobility.html#engagement">Civic Engagement</a></li>
+			                <li><a href="mobility.html#hobbies-interests">Hobbies & Interests</a></li>
+			                
+			            </ul>
+			        </li>
+			        
+			        <li><a href="contact.html">Contact</a></li>
+	        
+	            </ul>
+	        </nav>
+	    </div>
+	    
+        
+    </header>
+
+    <main>
+        <section id="hero-section">
+        	<div class="intro-text">
+        		<h2> Hello, My name is Ulrich Durel Fozing Keyendjo </h2>
+        		<p id="typewriter-text"></p> 
+            	
+            	<a href="about.html" class="button">About Me >></a>
+            	<div class="social-links">
+				    <a href="https://www.linkedin.com/in/ulrich-fozing-44036a252 " target="_blank"><i class="fab fa-linkedin-in"></i></a>
+				    <a href="https://t.me/FozingUlrich" target="_blank"><i class="fab fa-telegram"></i></a>
+				    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+				    <a href="https://wa.me/+33751472665"target="_blank"><i class="fab fa-whatsapp"></i></a>
+				</div>
+				            	
+        	</div>
+        	<div class="intro-image">
+            	<img src="images/PHOTOKeyendjo.jpg" alt="Photo professionnelle">
+        	</div>
+    	</section>
+	</main>
+	<script src="js/typewriter.js"></script>
+
+    <footer>
+    	<div class="footer-content">
+            <div class="footer-column contact-info">
+                <h3>Get in touch with me</h3>
+                <p><i class="fas fa-envelope"></i> ulrich.keyendjofozing@etu.inp-n7.fr</p>
+                <p><i class="fas fa-phone"></i> +33 7 51 47 26 65</p>
+            </div>
+
+            <div class="footer-column social-follow">
+                <h3>Follow Me</h3>
+                <div class="footer-social-links">
+                    <a href="https://www.linkedin.com/in/ulrich-fozing-44036a252 " target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://t.me/FozingUlrich" target="_blank"><i class="fab fa-telegram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://wa.me/+33751472665" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column about-footer">
+                <h3>About Me</h3>
+                <p>Passionate about technology and innovation, I am always eager to learn and take on new challenges.</p>
+            </div>
+        </div>
+
+        <div class="footer-copyright">
+            <p>&copy; 2025 Keyendjo Fozing Ulrich Durel. All rights reserved.</p>
+        </div>
+    </footer>
+    <div id="chat-button" onclick="toggleChat()">
+	    Let's chat
+	</div>
+	
+	<div id="chat-box">
+	    <div class="chat-header">
+	        Welcome to the chat space
+	    </div>
+	    <div class="chat-body">
+	    	<div id="chat-menu">
+		    	
+		        <p>We'll reply as soon as we can</p>
+		        
+		        <p>You can:</p>
+		        <ul>
+		            <li><a href="#" onclick="showForm()">Leave a message </a></li>
+		            
+		            <li><a href="#" onclick="showAvailabilities()">Check my availability for the week</a></li>
+		            
+		            <li><a href="#" onclick="toggleChat()">Close the chat space</a></li>
+		        </ul>
+		     </div>
+		     
+		     <div id="chat-form" style="display:none;">
+		     	<h3> Leave a Message </h3>
+		     	<form action= "https://formspree.io/f/mnnooogz" method= "POST">
+				    <input type="text" name="name" placeholder="Your Name" required>
+		            <input type="email" name="email" placeholder="Your Email" required>
+		            <input type="text" name="subject" placeholder="Subject">
+		            <textarea name="message" placeholder="Type your message here..." rows="4" required></textarea>
+		            
+		            <div class="file-upload">
+		                <input type="file" id="file-input" style="display:none;">
+		                <label for="file-input">Browse...</label>
+		                <span id="file-name">No file selected.</span>
+		            </div>
+		            
+		            <button type="submit" class="submit-button">Send Message</button>
+				     	
+		     	</form>
+		     	
+		     	<button type="button" class="back-button" onclick="showMenu()">Back to Menu</button>
+    		 </div>  
+    		 
+    		 <div id="chat-availability" style="display:none;">
+			    <h3>Availabilities</h3>
+			    
+			    <ul id="availability-list">  </ul>
+			    
+			    <button type="button" class="back-button" onclick="showMenu()">Back to menu</button>
+			 </div>
+    		   
+	    </div>
+	</div>
+	
+	<script src="js/chat-widget.js"></script>
+</body>
+</html>
+</body>
+</html>

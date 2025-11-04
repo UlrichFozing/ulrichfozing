@@ -1,0 +1,358 @@
+@charset "UTF-8";
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+/*
+Taille physique(cm) = (nombre de pixels/ nombre total de pixels de la largeur de l'IMG )* 2,54 cm
+PPI
+
+
+*/
+
+header {
+    background-color: #333; /*gris foncé , sobre et neutre;*/
+    color: white;
+    padding: 1em 0;
+    /*text-align: center;*/
+}
+#top-bar {
+    display: flex; /* Active l'alignement horizontal */
+    justify-content: space-between; /* Espace le logo à gauche et la nav à droite */
+    align-items: center; /* Centre les éléments verticalement */
+    max-width: 1200px; /* Limiter la largeur comme votre main */
+    margin: 0 auto; /* Centrer le conteneur top-bar */
+    padding: 0 20px;
+}
+/* Style spécifique du logo */
+#school-logo {
+    height: 40px; /* Définir une hauteur claire pour le logo */
+    width: auto; /* Garder les proportions */
+    background-color: white; /* Optionnel : si le logo est sur fond blanc */
+    padding: 5px; /* Optionnel : un peu d'espace autour */
+    border-radius: 3px;
+}
+#main-nav {
+    /* Si la navigation est sur la même ligne que le logo, nous allons
+       simplement centrer les liens à l'intérieur d'elle-même si vous ne voulez pas la décoller du logo. */
+    width: 100%; /* S'assurer qu'elle prend toute la largeur */
+    text-align: center; /* Centre le contenu des liens */
+    
+    /* Si vous voulez que la navigation soit SOUS la barre du logo, 
+       il faut la sortir du #top-bar en HTML (voir Étape 2). */
+}
+
+.social-links {
+    margin-top: 30px;
+}
+
+.social-links a {
+    color: #333; /* Couleur par défaut */
+    font-size: 24px;
+    margin-right: 15px;
+    transition: color 0.3s; /* Animation au survol */
+}
+
+.social-links a:hover {
+    color: #007bff; /* Changer de couleur au survol (comme sur le bouton) */
+}
+
+/* EportFolio.css */
+
+/* Style du conteneur footer */
+footer {
+    background-color: #333; /* Fond sombre */
+    color: white;
+    padding: 40px 0 10px; /* Espace vertical */
+    margin-top: 50px; /* Éloigner du contenu principal */
+}
+
+/* Contenu en 3 colonnes */
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Espacer les colonnes */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 30px;
+}
+
+.footer-column {
+    flex: 1; /* Chaque colonne prend une part égale de l'espace */
+    padding: 0 15px;
+}
+
+.footer-column h3 {
+    border-bottom: 2px solid #007bff; /* Soulignement bleu comme le modèle */
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+/* Style des icônes dans le footer */
+.footer-column p i, .footer-social-links a {
+    color: white;
+    margin-right: 10px;
+}
+
+.footer-social-links a {
+    font-size: 20px;
+}
+
+/* Section Copyright */
+.footer-copyright {
+    /* Nouveau fond gris foncé (moins sombre que le #333 du footer principal) */
+    background-color: #2a2a2a; 
+    
+    /* Couleur du texte légèrement atténuée pour l'effet "luminosité basse" */
+    color: #aaaaaa; 
+    
+    border-top: 1px solid #444; /* Ligne de séparation plus claire */
+    padding: 15px 0; /* Ajouter un peu plus d'espace autour */
+    text-align: center;
+}
+
+/* EportFolio.css */
+
+/* --- Style du bouton flottant "Let's chat" --- */
+#chat-button {
+    position: fixed; /* Reste fixe même en scrollant */
+    bottom: 40px; /* Position en bas de l'écran */
+    right: 40px; /* Position à droite de l'écran */
+    background-color: #007bff; /* Couleur de fond (le bleu de votre thème) */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px; /* Bords arrondis */
+    cursor: pointer; /* Indique qu'il est cliquable */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Assure qu'il est au-dessus du reste du contenu */
+    font-size: 14px;
+}
+
+/* --- Style de la fenêtre de chat (cachée) --- */
+#chat-box {
+    position: fixed;
+    bottom: 40px; 
+    right: 40px;
+    width: 300px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    overflow: hidden;
+    
+    /* Le style pour cacher la boîte par défaut (sera modifié par JS) */
+    display: none; 
+}
+
+.chat-header {
+    background-color: #333; /* Barre supérieure sombre */
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.chat-body {
+    padding: 15px;
+    font-size: 14px;
+}
+
+.chat-body ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.chat-body ul li {
+    margin-bottom: 5px;
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+nav ul li {
+    display: inline; /* affiche sur une mm ligne */
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;  /*stylise les liens avec une couleur blanche et supprime le soulignement par defaut*/
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: 10px auto; /* Ecart entre Header et la partie main */
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* EportFolio.css */
+
+/* 1. Mise en page principale (Flexbox pour les colonnes) */
+#hero-section {
+    display: flex; /* Active le modèle Flexbox */
+    align-items: center; /* Centre les éléments verticalement */
+    padding: 50px 0;
+}
+
+.intro-text {
+    flex: 1; /* Prend l'espace restant */
+    padding-right: 40px;
+}
+
+.intro-image {
+    flex-shrink: 0; /* Empêche la colonne image de rétrécir */
+}
+
+/* 2. Style de la photo (Cercle) */
+.intro-image img {
+    border-radius: 50%; /* Crée la forme de cercle */
+    width: 250px; /* Définir une taille fixe */
+    height: 250px;
+    object-fit: cover; /* Assure que l'image couvre le cercle sans être déformée */
+    border: 5px solid #007bff; /* Optionnel : une petite bordure de couleur */
+}
+
+/* 3. Style du bouton */
+.button {
+    display: inline-block;
+    background-color: #007bff; /* La couleur de votre choix */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+/* EportFolio.css (Styles du formulaire de chat) */
+
+#chat-form h3 {
+    margin-top: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Style des champs de saisie */
+#chat-form input[type="text"], 
+#chat-form input[type="email"], 
+#chat-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Assure que le padding est inclus dans la largeur */
+}
+
+/* Style des boutons d'action */
+.submit-button, .back-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.submit-button {
+    background-color: #007bff; /* Bleu du thème */
+    color: white;
+}
+
+.back-button {
+    background-color: #f0f0f0; /* Bouton gris */
+    color: #333;
+}
+
+/* Style pour l'upload de fichier (pour ressembler au modèle) */
+.file-upload {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 13px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.file-upload label {
+    padding: 6px 10px;
+    background-color: #f0f0f0;
+    border-right: 1px solid #ccc;
+    cursor: pointer;
+}
+
+#file-name {
+    padding: 6px 10px;
+    color: #666;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    flex-grow: 1;
+}
+
+
+
+/* EportFolio.css (Style des Menus Déroulants) */
+
+/* 1. Positionnement parent/enfant */
+.dropdown {
+    position: relative; /* Définit le point d'ancrage pour le menu déroulant */
+    display: inline-block; /* Assure que l'élément peut être survolé sans casser la ligne */
+}
+
+/* 2. Style initial du menu déroulant (CACHÉ) */
+.dropdown-menu {
+    display: none; /* Cache le menu par défaut */
+    position: absolute; /* Positionne le menu par rapport à son parent (.dropdown) */
+    top: 100%; /* Place le menu juste en dessous de l'onglet parent */
+    left: 50%; /* Centre horizontalement le menu (pour alignement par défaut) */
+    transform: translateX(-50%); /* Ajustement pour un centrage parfait */
+    
+    background-color: white; /* Fond blanc comme sur le modèle */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    min-width: 220px; /* Largeur minimale pour le contenu */
+    padding: 10px 0;
+    border-radius: 4px;
+    z-index: 999; /* Assure qu'il est au-dessus du contenu principal */
+}
+
+/* 3. Affichage au survol */
+.dropdown:hover .dropdown-menu {
+    display: block; /* Affiche le menu lorsque le parent .dropdown est survolé */
+}
+
+/* 4. Style des liens dans le menu déroulant */
+.dropdown-menu li {
+    display: block; /* Les éléments de la liste doivent prendre toute la largeur */
+    margin: 0;
+}
+
+.dropdown-menu li a {
+    color: #333; /* Couleur de texte sombre */
+    padding: 8px 15px;
+    display: block;
+    text-align: left; /* Aligner le texte à gauche */
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f0f0f0; /* Effet de survol léger */
+    color: #007bff;
+}
+
+/* 5. Style du lien parent (l'onglet "Education") */
+.dropdown:hover > a {
+    /* Style pour mettre en évidence l'onglet actuellement survolé (le fond bleu clair du modèle) */
+    background-color: #e0f0ff;
+    border-radius: 4px;
+    color: #007bff;
+}
+
